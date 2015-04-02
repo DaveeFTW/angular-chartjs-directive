@@ -1,6 +1,8 @@
 # Angular Chart-js Directive
 [Homepage](http://earlonrails.github.io/angular-chartjs-directive/)
 
+# Modifications
+directive will now fit its container
 
 ## Usage
 1. Include [chartjs](https://github.com/nnnick/Chart.js) via script tag, can use bower or download min

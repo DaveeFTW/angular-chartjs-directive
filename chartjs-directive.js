@@ -21,8 +21,16 @@ angular.module('chartjs-directive', []).
           width:  attrs.width  || baseWidth,
           height: attrs.height || baseHeight
         };
-        canvas.width = options.width;
-        canvas.height = options.height;
+        
+        function fitToContainer(canvas){
+            canvas.style.width='100%';
+            canvas.style.height='100%';
+            canvas.width  = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+            
+        fitToContainer(canvas);
+        
         chart = new Chart(context);
 
         scope.$watch(function(){ return element.attr('type'); }, function(value){
